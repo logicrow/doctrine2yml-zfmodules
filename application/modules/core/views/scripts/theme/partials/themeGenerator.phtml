@@ -1,0 +1,74 @@
+<ul class="themeSelect">
+    <li>
+        <label>Theme</label>
+        <select name="select theme">
+            <option value="Create New" selected>Create New</option>
+        </select>
+    </li>
+</ul>
+<ul class="propertiesList">
+    <li id="properties" class="left">
+        <label>Properties</label>
+        <select name="select theme" size="0" multiple>
+            <option value="backgorund">Backgorund</option>
+            <option value="typography">Typography</option>
+            <option value="border">Borders</option>
+        </select>
+    </li>
+    <li  id="background" class="left">
+        <label>Background</label>
+            <select name="select theme" size="0" multiple>
+                <option value="back-header">Header</option>
+                <option value="back-form">Form</option>
+                <option value="back-field">Fields</option>
+        </select>
+    </li>
+    <li id="typography" class="left">
+        <label>Typography</label>
+            <select name="select theme" size="0" multiple>
+                <option value="type-title">Title</option>
+                <option value="type-description">Description</option>
+                <option value="typo-field-title">Field Title</option>
+                <option value="type-field-text">Field Text</option>
+        </select>
+    </li>
+    <li id="border" class="left">
+        <label>Border</label>
+            <select name="select theme" size="0" multiple>
+                <option value="border-form">Form</option>
+                <option value="border-section">Section</option>
+        </select>
+    </li>
+    <li id="thickness" class="left">
+        <label>Thickness</label>
+        <select name="select theme" size="0" multiple>
+            <option value="0">None</option>
+            <option value="1px">Hairline</option>
+            <option value="3px">Thin</option>
+            <option value="5px">Medium</option>
+            <option value="10px">Thick</option>
+        </select>
+    </li>
+    <li id="border-style" class="left">
+        <label>Style</label>
+        <select name="borderStyle" size="0" multiple>
+            <option value="solid">Solid</option>
+            <option value="dotted">Dotted</option>
+            <option value="dashed">Dashed</option>
+            <option value="double">Double</option>
+        </select>
+    </li>
+    <li id="style" class="left">
+        <label>Style</label>
+            <select name="select theme" size="0" multiple>
+                <option value="normal">Normal</option>
+                <option value="bold">Bold</option>
+                <option value="italic">Italic</option>
+        </select>
+    </li>
+    <li id="font-size" class="left">
+        <label>Font Size</label>
+        <?php echo $this->render('theme/partials/fontSize.phtml');?>
+    </li>
+</ul>
+<?php echo $this->render('theme/partials/color.phtml');?>

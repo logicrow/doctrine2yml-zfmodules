@@ -1,0 +1,34 @@
+<div id="codeWrap">
+<?php echo $this->render('partials/formNavigation.phtml');?>
+
+    <div class="widget-top">
+        <h1>Ziown Theme Designer</h1>
+        <p>Such seems your beauty still.</p>
+        <div class="new-form"><a id="open-theme-name" href="#"><span>Save Theme</span></a> </div>
+    </div>
+    <div id="theme-form">
+        <form action="/theme/create" method="<?php echo $this->escape($this->form->getMethod()) ?>">
+            <?php echo $this->form->cssProperty;?>
+                <ul class="roundS">
+                    <li>
+                        <label>Theme Name</label>
+                        <?php echo $this->form->name;?>
+                    </li>
+                    <li>
+                        <?php echo $this->form->save;?>
+                    </li>
+                </ul>
+        </form>
+    </div>
+    <div id="themeContainer">
+        <div class="customizeList">
+            <div class="widgetList">
+                <?php echo $this->render('theme/partials/themeGenerator.phtml');?>
+            </div>
+        </div>
+        <div id="form-preview">
+            <?php echo $this->render('theme/partials/previewForm.phtml');?>
+        </div>
+    </div>
+</div>
+

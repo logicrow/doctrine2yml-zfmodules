@@ -1,0 +1,37 @@
+Entity\User:
+  type: entity
+  table: users
+  repositoryClass: Repositories\UserRepository
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    ipAddress:
+      type: string
+      length: 50
+    email:
+      type: string
+    password:
+      type: string
+      length: 40
+    activationCode:
+      type: string
+      length: 50
+      nullable: true
+    forgottenPasswordCode:
+      type: string
+      length: 50
+      nullable: true
+    status:
+      type: string
+      length: 20
+    createdAt:
+      type: datetime
+    updatedAt:
+      type: datetime
+      
+  lifecycleCallbacks:
+    prePersist: [ preCreate ]
+    postUpdate: [ preUpdate ]

@@ -1,0 +1,484 @@
+<div id="innerWrap">
+    <div class="manageTab">
+        <ul>
+            <li><a href="#">Form</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Theme</a></li>
+        </ul>
+    </div>
+    <div id="form-loader">
+        <form method="post" enctype="multipart/form-data" name="form1" id="form1" class="ziownUi leftLabel">
+            <div id="frmHeader-holder">
+
+            </div>
+            <ul id="ziown-form-element"></ul>
+            <div class="elemet-block-hover" id="form-captcha">
+                <div id="captcha-top-settings"
+                     style="background: rgb(170, 214, 170) none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(255, 255, 255);">
+                    Image Verification
+                </div>
+                <div id="captcha-settings"
+                     style="background: rgb(228, 248, 228) none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(0, 0, 0);">
+                    <div>
+                        <img alt="captcha field" src="/assets/images/recaptcha.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div id="save-action">
+                <input name="" type="button" class="save-form" value="Save Form"/>
+            </div>
+        </form>
+    </div>
+    <div id="settings-tab-id">
+        <div class="settings-tab">
+            <ul class="tabs">
+                <li class="frmElements"><a href="#frmElements" class="active">Add a Field</a></li>
+                <li class="fieldSettings"><a href="#fieldSettings">Field Settings</a></li>
+                <li class="formSettings"><a href="#formSettings">Form Settings</a></li>
+            </ul>
+
+        </div>
+        <div id="frmElements">
+            <h4>Standard</h4>
+            <ul>
+                <li class="ziown-cp-element"><a id="text" href="#"><span class="text-line">Single Text line</span></a></li>
+                <li class="ziown-cp-element"><a id ="number" href="#"><span class="input-number">Number</span></a></li>
+                <li class="ziown-cp-element"><a id="textarea" href="#"><span class="para-text">Paragraph Text</span></a></li>
+                <li class="ziown-cp-element"><a id="checkbox" href="#"><span class="input-check">Checkbox</span></a></li>
+                <li class="ziown-cp-element"><a id="radio" href="#"><span class="muliple-choice">Multiple Choice</span></a></li>
+                <li class="ziown-cp-element"><a id="select" href="#"><span class="dropdown">Dropdown</span></a></li>
+                <li class="ziown-cp-element"><a id="page_break" href="#"><span class="page-break">Page Break</span></a></li>
+                <li class="ziown-cp-element"><a id="section_break" href="#"><span class="section-break">Section Break</span></a></li>
+            </ul>
+            <h4>Advanced</h4>
+            <ul>
+                <li class="ziown-cp-element"><a id="name" href="#"><span class="input-name">Name</span></a></li>
+                <li class="ziown-cp-element"><a id="street_address" href="#"><span class="input-address">Address</span></a></li>
+                <li class="ziown-cp-element"><a id="email" href="#"><span class="input-email">Email</span></a></li>
+                <li class="ziown-cp-element"><a id="phone" href="#"><span class="input-phone">Phone</span></a></li>
+                <li class="ziown-cp-element"><a id="price" href="#"><span class="input-price">Price</span></a></li>
+                <li class="ziown-cp-element"><a id="file" href="#"><span class="input-upload">File Upload</span></a></li>
+                <li class="ziown-cp-element"><a id="datetime" href="#"><span class="input-date">Date</span></a></li>
+                <li class="ziown-cp-element"><a id="address" href="#"><span class="input-url">Website</span></a></li>
+                <li class="ziown-cp-element"><a id="input-table" href="#"><span class="input-table">Table</span></a></li>
+            </ul>
+        </div>
+
+        <div class="formSettings" id="formSettings">
+            <ul>
+                <li>
+                    <label for="form_title" class="des">Form Title</label>
+                    <input id="form_title" value="Form Title" class="form-properties input-border"/>
+                    <input type="checkbox" id="show_form_title" checked="checked" class="form-properties"/>show on form
+                </li>
+                <li>
+                    <label for="form_description" class="des">Description</label>
+                    <textarea cols="40" rows="5" id="form_description" class="form-properties input-border">This is your
+                        form
+                        description. Click here to edit</textarea>
+                </li>
+
+                <li>
+                    <fieldset class="field-wrap" style=" display:inline;">
+                        <legend>Confirmation Options</legend>
+
+                        <div>
+                    <span><input type="radio" name="confirmation" id="form_success_message_option" checked="checked"
+                                 class="form-properties"/></span>
+                            <span><label for="form_success_message_option">Show Text</label></span>
+                        </div>
+                        <div>
+                    <span><input type="radio" name="confirmation" id="form_redirect_option"
+                                 class="form-properties input-border"/></span>
+                            <span><label for="form_redirect_option">Redirect URL</label></span>
+                        </div>
+                        <textarea cols="30" rows="5" id="form_success_message" class="input-border">Thank you! Your
+                            submission has been saved!</textarea>
+                        <input type="text" value="http://" name="text" id="form_redirect_url"
+                               class="formjoe-form-element-hide input-border"/>
+
+                    </fieldset>
+                </li>
+
+                <li>
+
+                    <label for="formLabelAlign" class="des">Label Placement</label>
+                    <label>
+                        <select id="formLabelAlign">
+                            <option value="topLabel" selected="selected">Top Aligned</option>
+                            <option value="leftLabel">Left Aligned</option>
+                            <option value="rightLabel">Right Aligned</option>
+                        </select>
+                    </label>
+
+                </li>
+                <li>
+                    <label class="des">Send Button Name</label>
+                    <input type="text" id="send_button_name" value="Send" class="input-border"/>
+                </li>
+                <li id="send_button_alignment">
+                    <fieldset class="field-wrap" style=" display:inline;">
+                        <legend>Send Button alignment</legend>
+                        <div>
+                                <span><input type="radio" name="send_button_align" value="left"
+                                             id="send_button_align_left" checked="checked"/>
+                                    <label>Left</label>
+                                </span>
+                                <span><input type="radio" name="send_button_align" value="middle"
+                                             id="send_button_align_middle"/>
+                                    <label>Middle</label>
+                                </span>
+                                <span>
+                                    <input type="radio" name="send_button_align" value="right"
+                                           id="send_button_align_right"/>
+                                    <label>Right</label>
+                                </span>
+                        </div>
+                    </fieldset>
+                </li>
+
+                <li>
+                    <fieldset class="field-wrap" style=" display:inline;">
+                        <legend>Anti Spam</legend>
+                        <div>
+                            <input type="radio" name="anti_spam" id="anti_spam_1" value="1" checked="checked"
+                                   class="form-properties"/>
+                            Show CAPTCHA Image Verification
+
+                            <input type="radio" name="anti_spam" id="anti_spam_0" value="0" class="form-properties"/>
+                            None
+                        </div>
+                    </fieldset>
+                </li>
+            </ul>
+        </div>
+        <div class="fieldSettings" id="fieldSettings">
+                <div class="panel-top">
+          <div class="panel-bot">
+            <form action="" method="post">
+                <div id="emf-element-no-selected" class="emf-element-no-selected" style="display: block;">
+                    <h3><b>Please select a field</b></h3>
+                    <p>Click on a field in the form preview on the right to change its properties.</p>
+                </div>
+                <span id="ziown-element-position" class="serial"></span>
+                <ul class="f-ettings" style="display: none;" id="emf-element-properties">
+
+                    <li>
+                        <label class="des">Field Label </label>
+                        <span class="allclear">
+                            <input onkeyup="set_element_properties_by_type($(this).val(), 'title')" name="textarea2" type="text" value="" size="30" class="input-border" id="emf-element-label" />
+                        </span>
+                    </li>
+
+                    <li style="margin: 0px; padding: 0px;" id="emf-element-type-reserved">
+                        <span style="display: none;">
+                            <label for="element_type" class="des">
+                                Field Type
+                                <!--                                            <a rel="Field Type detemines what kind of data can be collected by your field. After you save the form, the field type cannot be changed." title="Field Type" class="emf-tooltip" href="javascript:set_void();">(?)</a>-->
+                            </label>
+                            <select onchange="set_element_properties_by_type($(this).val(), 'type')" tabindex="12" id="emf-element-type-select" class="emf-select emf-full">
+                                <option value="text">Single Line Text</option>
+                                <option value="textarea">Paragraph Text</option>
+                                <option value="radio">Multiple Choice</option>
+                                <option value="checkbox">Checkboxes</option>
+                                <option value="select">Drop Down</option>
+                                <option value="number">Number</option>
+                            </select>
+                        </span>
+                    </li>
+
+                    <li style="display: block;" id="emf-element-choices" class="emf-clear">
+                        <fieldset class="field-wrap" style=" display:inline;">
+                            <legend class="group" style="-moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px;">Choices
+                                <!--                                                <a rel="Use the + and - buttons to add and delete choices. Click on the checkbox to make a choice the default selection." title="Choices" class="emf-tooltip" href="javascript:set_void();">(?)</a>-->
+                            </legend>
+                            <div class="emf-fieldset-first-div" style="-moz-border-radius-topright: 10px; -moz-border-radius-bottomleft: 10px; -moz-border-radius-bottomright: 10px;">
+                                <ul id="element_choices"><li><img alt="Default" src="assets/images/form-element-option-default-unselect.png" onclick="set_choice_default(0)"/><input type="text" onkeypress="element_choices_event(event,0)" onkeyup="set_element_properties_by_type(this.value, 'choices', 0)" value="First option" autocomplete="off" maxlength="250" class="emf-text" id="choice0"/> <img alt="Add" src="assets/images/form-element-option-add.png" onclick="insert_element_choice(1)"/><img alt="Delete" src="assets/images/form-element-option-delete.png" onclick="delete_element_checkbox(0, 0, 'radio', 0)"/></li><li><img alt="Default" src="assets/images/form-element-option-default-unselect.png" onclick="set_choice_default(1)"/><input type="text" onkeypress="element_choices_event(event,1)" onkeyup="set_element_properties_by_type(this.value, 'choices', 1)" value="Second option" autocomplete="off" maxlength="250" class="emf-text" id="choice1"/> <img alt="Add" src="assets/images/form-element-option-add.png" onclick="insert_element_choice(2)"/><img alt="Delete" src="assets/images/form-element-option-delete.png" onclick="delete_element_checkbox(0, 0, 'radio', 1)"/></li><li><img alt="Default" src="assets/images/form-element-option-default-unselect.png" onclick="set_choice_default(2)"/><input type="text" onkeypress="element_choices_event(event,2)" onkeyup="set_element_properties_by_type(this.value, 'choices', 2)" value="Third option" autocomplete="off" maxlength="250" class="emf-text" id="choice2"/> <img alt="Add" src="assets/images/form-element-option-add.png" onclick="insert_element_choice(3)"/><img alt="Delete" src="assets/images/form-element-option-delete.png" onclick="delete_element_checkbox(0, 0, 'radio', 2)"/></li></ul>
+                                <div id="emf-element-prechoice-dialog" style="display: block;">
+                                    <input type="hidden" class="thickbox" alt="#TB_inline?height=350&amp;width=480&amp;inlineId=prechoice_dialog" id="prechoice_dialog_button"/>
+                                    <!--<input type="button" onclick="get_pre_choice();" value="Import predefined choices"/>-->
+                                </div>
+                            </div>
+                        </fieldset>
+                    </li>
+
+                    <li style="display: block;" id="emf-element-options" class="emf-left emf-half">
+                        <fieldset class="field-wrap" style=" display:inline;">
+                            <legend>Options</legend>
+                            <input type="checkbox" onchange="(this.checked) ? checkVal = '1' : checkVal = '0';set_element_properties_by_type(checkVal, 'is_required')" class="checkbox" id="element_required"/>
+
+                            <label for="element_required">Required
+                                <!--                                        <a rel="Checking this option will force user fills out the field. An error message will be shown to the user if this field is left blank." title="Required" class="emf-tooltip" href="javascript:set_void();">(?)</a><br/>-->
+                            </label>
+                            <span style="display: none;">
+                                <input type="checkbox" onchange="(this.checked) ? checkVal = '1' : checkVal = '0';set_element_properties_by_type(checkVal, 'is_unique')" value="" class="checkbox" id="element_unique" style="visibility: hidden;"/>
+                                <label for="element_unique">No Duplicates</label>
+                                <!--                                        <a rel="Checking this will make sure the data entered into this field is unique and has not been submitted before." title="No Duplicates" class="emf-tooltip" href="javascript:set_void();">(?)</a>-->
+                                <br/>
+                            </span>
+                        </fieldset>
+                    </li>
+                    <li style="display: none;" id="emf-element-phone-format" class="emf-left emf-half">
+                        <label class="des">
+                            Phone Format
+                            <!--                                        <a href="javascript:set_void();" class="emf-tooltip" title="About Phone Format" rel="Choose between American and International Phone Formats.">(?)</a>-->
+                        </label>
+                        <select class="emf-select emf-half" id="emf-phone-format-select" onchange="set_custom_property_by_type($(this).val(),0);set_element_properties_by_type($(this).val(), 'phone_format');" style="width: 120px ! important;">
+                            <option value="format">### - ### - ####</option>
+                            <option value="international">International</option>
+                        </select>
+                    </li>
+
+                    <li style="display: block;" id="emf-element-name-format" class="emf-left emf-half">
+                        <label class="emf-element-desc">
+                            Name Format
+                            <!--                                        <a href="javascript:set_void();" class="emf-tooltip" title="About Name Format" rel="Choose between a normal name field, or an extended name field with title and suffix.">(?)</a>-->
+                        </label>
+                        <select class="emf-select emf-half" id="emf-name-format-select" onchange="set_custom_property_by_type($(this).val(),0);set_element_properties_by_type($(this).val(), 'name_format');" style="width: 120px ! important;">
+                            <option value="normal">Normal</option>
+                            <option value="extended">Extended</option>
+                        </select>
+                    </li>
+
+                    <li style="display: none;" id="emf-element-size" class="emf-right emf-half">
+                        <label for="field_size" class="des">
+                            Field Size
+                            <!--                                            <a rel="This property set the visual size of the field in your form. It does not determine the amount of data that can be collected by the field." title="Field Size" class="emf-tooltip" href="javascript:set_void();">(?)</a>-->
+                        </label>
+                        <select onchange="set_element_properties_by_type($(this).val(), 'size_cols')" id="field_size" class="emf-select emf-full">
+                            <option value="20">Small</option>
+                            <option value="30">Medium</option>
+                            <option value="60">Large</option>
+                        </select>
+                    </li>
+
+                    <li style="display: none;" id="emf-element-cols-rows" class="emf-left emf-clear">
+                        <fieldset class="field-wrap" style=" display:inline;">
+                            <legend class="group" style="-moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px;">Field Size
+                                <!--                                            <a rel="This property set the visual size of the field in your form. It does not determine the amount of data that can be collected by the field." title="Field Size" class="emf-tooltip" href="javascript:set_void();">(?)</a>-->
+                            </legend>
+                            <div style="width: 270px; -moz-border-radius-topright: 10px; -moz-border-radius-bottomleft: 10px; -moz-border-radius-bottomright: 10px;" class="emf-fieldset-first-div">
+                                <table><tbody><tr>
+                                            <td>
+                                                <span id="emf-element-cols-span">
+                                                    <label>Cols</label>
+                                                    <input type="text" onblur="set_element_properties_by_type($(this).val(), 'size_cols');" onkeyup="only_allow_enter_number(this);set_element_properties_by_type($(this).val(), 'size_cols');" class="input-border" id="emf-element-cols" size="8" />
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span id="emf-element-rows-span">
+                                                    <label>Rows</label>
+                                                    <input type="text" onblur="set_element_properties_by_type($(this).val(), 'size_rows');" onkeyup="only_allow_enter_number(this);set_element_properties_by_type($(this).val(), 'size_rows');" class="input-border" id="emf-element-rows" size="8" />
+                                                </span>
+                                            </td>
+                                        </tr></tbody></table>
+                                <div class="emf-clear"/>
+                            </div>
+                        </fieldset>
+                    </li>
+
+                    <li style="display: none;" id="emf-element-range" class="emf-left emf-clear">
+                        <fieldset class="field-wrap" style=" display:inline;">
+                            <legend class="group" style="-moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px;">Range
+                                <!--                                            <a rel="This setting limits the amount of data the visitor can input. First select characters or words. Next enter the min/max/range number of characters/words allowed in the range field." title="Range" class="emf-tooltip" href="javascript:set_void();">(?)</a>-->
+                            </legend>
+                            <span style="display: none;" id="emf-element-range-rel">This setting limits the amount of data the visitor can input. First select characters or words. Next enter the min/max/range number of characters/words allowed in the range field.</span>
+                            <span style="display: none;" id="emf-element-range-rel-number">This setting limits the amount of data the visitor can input. First select digits or value. Next enter the min/max/range number of digits/values allowed in the range field. </span>
+                            <div class="emf-fieldset-first-div" style="-moz-border-radius-topright: 10px; -moz-border-radius-bottomleft: 10px; -moz-border-radius-bottomright: 10px;">
+                                <span>
+                                    <label class="des">Range Min</label>
+                                    <input type="text" onblur="set_element_properties_by_type($(this).val(), 'range_min')" onkeyup="only_allow_enter_number(this);" class="emf-text" id="emf-element-range-min"/>
+                                </span>
+                                <span>
+                                    <label class="des">Range Max</label>
+                                    <input type="text" onblur="set_element_properties_by_type($(this).val(), 'range_max')" onkeyup="only_allow_enter_number(this);" class="emf-text" id="emf-element-range-max"/>
+                                </span>
+                                <span>
+                                    <label class="des">Range Type</label>
+                                    <select onchange="set_element_properties_by_type($(this).val(), 'range_type');change_range_status($(this).val())" class="emf-select" id="emf-element-range-type" style="display: block;">
+                                        <option value="1">Characters</option>
+                                        <option value="2">Words</option>
+                                    </select>
+                                    <select onchange="set_element_properties_by_type($(this).val(), 'range_type');change_range_status($(this).val())" class="emf-select" id="emf-element-range-type-number" style="display: none;">
+                                        <option value="3">Digits</option>
+                                        <option value="4">Value</option>
+                                    </select>
+                                </span>
+                                <br clear="all"/>
+                            </div>
+                        </fieldset>
+                    </li>
+
+                    <li style="display: block;" id="emf-element-access-control" class="emf-right emf-half">
+                        <fieldset style="display: none;" class="field-wrap">
+                            <legend>Field Visible to</legend>
+                            <input type="radio" onclick="set_element_properties_by_type('0', 'is_private')" tabindex="16" checked="checked" value="" class="emf-radio" name="security" id="fieldPublic"/>
+                            <label for="fieldPublic" class="emf-choice">Everyone</label>
+                            <!--                                            <a rel="This is the default option. The field will be accessible by anyone when the form is made public." title="Visible to Everyone" class="emf-tooltip" href="javascript:set_void();">(?)</a><br/>-->
+
+                            <input type="radio" onclick="set_element_properties_by_type('1', 'is_private')" tabindex="17" value="" class="radio" name="security" id="fieldPrivate"/>
+                            <label for="fieldPrivate" class="emf-choice">Admin Only</label>
+                            <!--                                            <a rel="Fields that are set to 'Admin Only' will not be shown to users when the form is made public." title="Admin Only" class="emf-tooltip" href="javascript:set_void();">(?)</a>-->
+                            <br/>
+                        </fieldset>
+                    </li>
+
+                    <li id="emf-element-randomize" class="emf-left emf-half emf-clear" style="display: block;">
+                        <fieldset style="display: none;" class="field-wrap">
+                            <legend>Randomize</legend>
+                            <input type="radio" onclick="set_element_properties_by_type('', 'constraint')" tabindex="16" checked="checked" value="" class="radio" name="randomize" id="element_not_random"/>
+                            <label for="element_not_random" class="emf-choice">Static Order</label>
+                            <!--                                            <a rel="This is the default option. Options will always be displayed in the order you have created them." title="Static Order" class="emf-tooltip" href="javascript:set_void();">(?)</a><br/>-->
+                            <input type="radio" onclick="set_element_properties_by_type('random', 'constraint')" tabindex="16" value="" class="emf-radio" name="randomize" id="element_random"/>
+                            <label for="element_random" class="emf-choice">Random Order</label>
+                            <!--                                            <a rel="Choose this if you would like the options to be shuffled around each time someone views your form." title="Random Order" class="emf-tooltip" href="javascript:set_void();">(?)</a><br/>-->
+                        </fieldset>
+                    </li>
+
+                    <li style="display: none;" id="emf-element-datetime" class="emf-clear">
+                        <fieldset class="field-wrap" style=" display:inline;">
+                            <legend class="group" style="-moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px;">Choices
+                                <!--                                                    <a rel="By setting this value, the user can enter either date and time,only date or only time." title="Default Value" class="emf-tooltip" href="javascript:set_void();">(?)</a>-->
+                            </legend>
+                            <div class="emf-fieldset-first-div" style="-moz-border-radius-topright: 10px; -moz-border-radius-bottomleft: 10px; -moz-border-radius-bottomright: 10px;">
+                                <table width="100%"><tbody><tr><td valign="top" style="width: 20px;">
+                                                <input type="radio" onblur="set_element_properties_by_type($(this).val(), 'datetime_option');valid_field_by_default_value();" onchange="set_custom_property_by_type($('[name=datetime_option]:checked').val(),0)" onclick="$('#default_time_part,#dash'+ziown_form_selected_element).hide();$('#default_date_part,#datepart'+ziown_form_selected_element).show();$('#datepicker'+ziown_form_selected_element).show();$('#timepart'+ziown_form_selected_element).hide();" maxlength="255" tabindex="20" value="date" name="datetime_option" class="" id="element_datetime_dateonly" checked="checked"/> </td><td valign="top" align="left">Date only</td></tr></tbody></table>
+                                <table width="100%"><tbody><tr><td valign="top" style="width: 20px;">
+                                                <input type="radio" onblur="set_element_properties_by_type($(this).val(), 'datetime_option');valid_field_by_default_value();" onchange="set_custom_property_by_type($('[name=datetime_option]:checked').val(),0)" onclick="$('#default_date_part,#dash'+ziown_form_selected_element).hide();$('#datepart'+ziown_form_selected_element).hide();$('#datepicker'+ziown_form_selected_element).hide();$('#default_time_part,#timepart'+ziown_form_selected_element).show();" maxlength="255" tabindex="20" value="time" name="datetime_option" class="" id="element_datetime_timeonly"/> </td><td valign="top" align="left">Time only</td></tr></tbody></table>
+                                <table width="100%"><tbody><tr><td valign="top" style="width: 20px;">
+                                                <input type="radio" onblur="set_element_properties_by_type($(this).val(), 'datetime_option');valid_field_by_default_value();" onchange="set_custom_property_by_type($('[name=datetime_option]:checked').val(),0)" onclick="$('#dash'+ziown_form_selected_element).show();$('#default_date_part,#default_time_part,#datepart'+ziown_form_selected_element).show();$('#datepicker'+ziown_form_selected_element).show();$('#timepart'+ziown_form_selected_element).show();" maxlength="255" tabindex="20" value="full" name="datetime_option" class="" id="element_datetime_full"/> </td><td valign="top" align="left"> Date and Time</td></tr></tbody></table>
+                            </div>
+                        </fieldset>
+                    </li>
+                    <li style="display: none;" id="emf-element-default-date-value" class="emf-clear">
+                        <label for="element_default-date" class="emf-element-desc">
+                            Default Value
+                            <!--                                            <a rel="By setting this value, the field will be prepopulated with the text you enter." title="Default Value" class="emf-tooltip" href="javascript:set_void();">(?)</a>-->
+                        </label>
+                        <span id="default_date_part">
+                            <span><input type="text" onblur="if(isNaN(this.value) || this.value>12) { alert('Month should be a number not greater than 12');this.value='';set_element_properties_by_type(get_default_date(), 'default_value');fill_default_date(get_default_date());return false;};set_element_properties_by_type(get_default_date(), 'default_value');valid_field_by_default_value();" onkeyup="fill_default_date(get_default_date());set_element_properties_by_type(get_default_date(), 'default_value')" size="2" maxlength="2" tabindex="11" value="" name="text" id="element_default_date_m" style="border: 1px dotted black; width: 15px;"/><br/>MM</span><span> / </span><span>
+                                <input type="text" onblur="if(isNaN(this.value) || this.value>31) { alert('Day should be a number not greater than 31');this.value='';set_element_properties_by_type(get_default_date(), 'default_value');fill_default_date(get_default_date());return false;};set_element_properties_by_type(get_default_date(), 'default_value');valid_field_by_default_value();" onkeyup="fill_default_date(get_default_date());set_element_properties_by_type(get_default_date(), 'default_value')" size="2" maxlength="2" tabindex="2" value="" name="text" id="element_default_date_d" style="border: 1px dotted black; width: 15px;"/><br/>DD</span><span> / </span>
+                            <span>
+                                <input type="text" onblur="if(isNaN(this.value) ) { alert('Year should be a number.');this.value='';fill_default_date(get_default_date());set_element_properties_by_type(get_default_date(), 'default_value');return false;};set_element_properties_by_type(get_default_date(), 'default_value');valid_field_by_default_value();" onkeyup="fill_default_date(get_default_date());set_element_properties_by_type(get_default_date(), 'default_value')" size="4" maxlength="4" tabindex="2" value="" name="text" id="element_default_date_y" style="border: 1px dotted black; width: 30px;"/><br/>YYYY</span><input type="hidden" style="padding: 3px;" class="datepicker hasDatepicker" id="dp1279284534538"/><img class="ui-datepicker-trigger" src="assets/images/calendar.png" alt="..." title="..."/>
+                        </span><span id="default_time_part">
+                            <table><tbody><tr>
+                                        <td>
+                                            <input type="text" onblur="if(isNaN(this.value) || this.value>12) { alert('Hour should be a number not greater than 12');this.value='';set_element_properties_by_type(get_default_date(), 'default_value');return false;};set_element_properties_by_type(get_default_date(), 'default_value');valid_field_by_default_value();" onkeyup="fill_default_date(get_default_date());set_element_properties_by_type(get_default_date(), 'default_value')" size="2" maxlength="2" tabindex="2" value="" name="text" style="border: 1px dotted black; width: 15px;" id="element_default_date_hr"/>
+                                        </td>
+                                        <td> : </td>
+                                        <td>
+                                            <input type="text" onblur="if(isNaN(this.value) || this.value>59) { alert('Hour should be a number not greater than 59');this.value='';set_element_properties_by_type(get_default_date(), 'default_value');return false;};set_element_properties_by_type(get_default_date(), 'default_value');valid_field_by_default_value();" onkeyup="fill_default_date(get_default_date());set_element_properties_by_type(get_default_date(), 'default_value')" size="2" maxlength="2" tabindex="2" value="" name="text" style="border: 1px dotted black; width: 15px;" id="element_default_date_mn"/>
+                                        </td>
+                                        <td>
+                                            <select onblur="set_element_properties_by_type(get_default_date(), 'default_value');" onchange="fill_default_date(get_default_date());set_element_properties_by_type(get_default_date(), 'default_value');" id="element_default_date_ampm" style="border: 1px dotted black; width: 50px;">
+                                                <option value="AM">AM</option>
+                                                <option value="PM">PM</option>
+                                            </select>
+                                        </td></tr><tr>
+                                    </tr><tr><td valign="top"> HH</td><td/><td valign="top">MM</td><td valign="top" align="center">AM/PM</td></tr>
+                                </tbody></table>
+                        </span>
+                    </li>
+
+                    <li style="display: none;" id="emf-element-phone-format-default" class="emf-clear">
+                        <label for="element_default-date" class="des">
+                            Default Value
+                            <!--                                            <a rel="By setting this value, the field will be prepopulated with the text you enter." title="Default Value" class="emf-tooltip" href="javascript:set_void();">(?)</a>-->
+                        </label>
+                        <div>
+                            <input type="text" onblur="if(isNaN(this.value) || this.value.length!=3){ alert('Please enter a 3 digits phone number.');this.value='';}" onkeyup="fill_default_phone(get_default_phone());set_element_properties_by_type(get_default_phone(), 'default_value');" maxlength="3" style="width: 30px;" id="element_default_phone1"/>
+                            - <input type="text" onblur="if(isNaN(this.value) || this.value.length!=3){ alert('Please enter a 3 digits phone number.');this.value='';}" onkeyup="fill_default_phone(get_default_phone());set_element_properties_by_type(get_default_phone(), 'default_value');" maxlength="3" style="width: 30px;" id="element_default_phone2"/>
+                            - <input type="text" onblur="if(isNaN(this.value) || this.value.length!=4){ alert('Please enter a 4 digits phone number.');this.value='';}" onkeyup="fill_default_phone(get_default_phone());set_element_properties_by_type(get_default_phone(), 'default_value');" maxlength="4" style="width: 30px;" id="element_default_phone3"/>
+                        </div>
+                    </li>
+
+                    <li style="display: none;" id="emf-element-country-default" class="emf-clear">
+                        <label class="emf-element-desc">
+                            Predefined Country
+                            <!--                                    <a title="About Predefined Country" rel="By setting this value, the country field will be prepopulated with the selection you make when a user visits your form." class="emf-tooltip" href="javascript:set_void();">(?)</a>-->
+                        </label>
+                        <div>
+                            <select onchange="set_element_properties_by_type($(this).val(), 'default_value');" class="emf-full" id="emf-element-country-default-select">
+                                <option value=""/>
+                                <optgroup label="North America"><option value="Antigua and Barbuda">Antigua and Barbuda</option><option value="Aruba,Bahamas">Aruba,Bahamas</option><option value="Barbados">Barbados</option><option value="Belize">Belize</option><option value="Canada">Canada</option><option value="Cook Islands">Cook Islands</option><option value="Costa Rica">Costa Rica</option><option value="Cuba">Cuba</option><option value="Dominica">Dominica</option><option value="Dominican Republic">Dominican Republic</option><option value="El Salvador">El Salvador</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Haiti">Haiti</option><option value="Honduras">Honduras</option><option value="Jamaica">Jamaica</option><option value="Mexico">Mexico</option><option value="Netherlands Antilles">Netherlands Antilles</option><option value="Nicaragua">Nicaragua</option><option value="Panama ">Panama </option><option value="Puerto Rico ">Puerto Rico </option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Saint Lucia">Saint Lucia</option><option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="United States">United States</option></optgroup><optgroup label="South America"><option value="Argentina">Argentina</option><option value="Bolivia">Bolivia</option><option value="Brazil">Brazil</option><option value="Chile">Chile</option><option value="Colombia">Colombia</option><option value="Ecuador">Ecuador</option><option value="Guyana">Guyana</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Suriname">Suriname</option><option value="Uruguay">Uruguay</option><option value="Venezuela">Venezuela</option></optgroup><optgroup label="Europe"><option value="Albania">Albania</option><option value="Andorra">Andorra</option><option value="Armenia">Armenia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Bulgaria">Bulgaria</option><option value="Croatia">Croatia</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Estonia">Estonia</option><option value="Faroe Islands">Faroe Islands</option><option value="Finland">Finland</option><option value="France">France</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Greece">Greece</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="Ireland">Ireland</option><option value="Italy">Italy</option><option value="Latvia">Latvia</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia">Macedonia</option><option value="Malta">Malta</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Montenegro">Montenegro</option><option value="Netherlands">Netherlands</option><option value="Norway">Norway</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Romania">Romania</option><option value="San Marino">San Marino</option><option value="Serbia">Serbia</option><option value="Slovakia">Slovakia</option><option value="Slovenia">Slovenia</option><option value="Spain">Spain</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Ukraine">Ukraine</option><option value="United Kingdom">United Kingdom</option><option value="Vatican City">Vatican City</option></optgroup><optgroup label="Asia"><option value="Afghanistan">Afghanistan</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Bhutan">Bhutan</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Myanmar">Myanmar</option><option value="Cambodia">Cambodia</option><option value="China">China</option><option value="East Timor">East Timor</option><option value="Hong Kong">Hong Kong</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran">Iran</option><option value="Iraq">Iraq</option><option value="Israel">Israel</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="North Korea">North Korea</option><option value="South Korea">South Korea</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Laos">Laos</option><option value="Lebanon">Lebanon</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mongolia">Mongolia</option><option value="Nepal">Nepal</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palestine">Palestine</option><option value="Philippines">Philippines</option><option value="Qatar">Qatar</option><option value="Russia">Russia</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Singapore">Singapore</option><option value="Sri Lanka">Sri Lanka</option><option value="Syria">Syria</option><option value="Taiwan">Taiwan</option><option value="Tajikistan">Tajikistan</option><option value="Thailand">Thailand</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="United Arab Emirates">United Arab Emirates</option><option value="Uzbekistan">Uzbekistan</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option></optgroup><optgroup label="Oceania"><option value="Australia">Australia</option><option value="Fiji">Fiji</option><option value="Kiribati">Kiribati</option><option value="Marshall Islands">Marshall Islands</option><option value="Micronesia">Micronesia</option><option value="Nauru">Nauru</option><option value="New Zealand">New Zealand</option><option value="Palau">Palau</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Samoa">Samoa</option><option value="Solomon Islands">Solomon Islands</option><option value="Tonga">Tonga</option><option value="Tuvalu">Tuvalu</option><option value="Vanuatu">Vanuatu</option></optgroup><optgroup label="Africa"><option value="Algeria">Algeria</option><option value="Angola">Angola</option><option value="Benin">Benin</option><option value="Botswana">Botswana</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cameroon">Cameroon</option><option value="Cape Verde">Cape Verde</option><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Comoros">Comoros</option><option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option><option value="Republic of the Congo">Republic of the Congo</option><option value="Djibouti">Djibouti</option><option value="Egypt">Egypt</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Ethiopia">Ethiopia</option><option value="Gabon">Gabon</option><option value="Gambia">Gambia</option><option value="Ghana">Ghana</option><option value="Gibraltar">Gibraltar</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Cote d'Ivoire">Cote d'Ivoire</option><option value="Kenya">Kenya</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Mali">Mali</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Namibia">Namibia</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Rwanda">Rwanda</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Senegal">Senegal</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="Sudan">Sudan</option><option value="Swaziland">Swaziland</option><option value="United Republic of Tanzania">United Republic of Tanzania</option><option value="Togo">Togo</option><option value="Tunisia">Tunisia</option><option value="Uganda">Uganda</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option></optgroup>								</select>
+                        </div>
+                    </li>
+
+                    <li style="display: none;" id="emf-element-default-value" class="emf-clear">
+                        <label for="element_default" class="des">
+                            Default Value
+                            <!--                                            <a rel="By setting this value, the field will be prepopulated with the text you enter." title="Default Value" class="emf-tooltip" href="javascript:set_void();">(?)</a>-->
+                        </label>
+                        <input type="text" onblur="set_element_properties_by_type($(this).val(), 'default_value');valid_field_by_default_value();" onkeyup="set_element_properties_by_type($(this).val(), 'default_value')" maxlength="255" name="text" class="emf-text emf-medium" id="element_default"/>
+                    </li>
+
+                    <!--                                    <li class="emf-clear">
+                                                                <label for="element_instructions" class="emf-element-desc">
+                                                                Instructions for User
+                                                                <a rel="This text will be displayed to your users while they're filling out particular field." title="instructions" class="emf-tooltip" href="javascript:set_void();">(?)</a>
+                                                                </label>
+                                                                <textarea onblur="set_element_properties_by_type($(this).val(), 'instructions')" onkeyup="set_element_properties_by_type($(this).val(), 'instructions')" tabindex="18" id="emf-element-instructions" cols="50" rows="10" class="emf-textarea"/>
+                                                        </li>
+
+                                                        <li style="display: block;" id="emf-element-css" class="emf-clear emf-hide">
+                                                                <label for="element_css" class="emf-element-desc">
+                                                                Add CSS Keywords
+                                                                <a rel="Add CSS Layout Keywords." title="Add CSS Layout Keywords" class="emf-tooltip" href="javascript:set_void();">(?)</a>
+                                                                </label>
+                                                                <input type="text" onblur="set_element_properties_by_type($(this).val(), 'css_class_name')" onkeyup="set_element_properties_by_type($(this).val(), 'css_class_name')" maxlength="255" value="" name="text" class="emf-text emf-medium" id="element-css"/>
+                                                        </li>-->
+                </ul>
+
+                <!--                                 <ul class="set-action">
+                                                 <li class="dupli"><input name="" type="button" value="Duplicate" /></li>
+                                                 <li class="del"><input type="button" name="button" id="button" value="Delete" /></li>
+                                                 <li class="add-f"><input type="button" name="button" id="button" value="Add field" /></li>
+                                                 </ul>-->
+                <span class="clear"></span>
+            </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+<script type="text/javascript">
+    var json_form = {"id":"0","name":"Form Title","description":"This is your form description. Click here to edit.","redirect":"http://","success_message":"Thank you! Your submission has been saved!","captcha":"0","language":"english","label_placement":"leftLabel","fheader":"","ffooter":"","table_css":"","td_css":"","send_button_name":"Send email","send_button_align":"left","anti_spam":"1","anti_spam_limit_submissions":"0","captcha_top_bg":"#AAD6AA","captcha_top_color":"#FFFFFF","captcha_bg":"#E4F8E4","captcha_color":"#000000","password":"","unique_ip":"","fclearb":"0","fclearbname":"Clear","fexporting":"0","fdmode":"1","font_face":"Verdana","font_size":"2","fcolor":"#000000","fcolorbg":"#FFFFFF","show_form_name":"1","limit_entries":"0"};
+    var json_elements = {"elements":[]};
+    var form_id_from_db = 0;
+    var emf_current_action = 'build';
+    var site_url = "<?php echo $this->baseUrl()?>"
+    var form_action_url ="/form/save"
+
+</script>
+<script src="/assets/js/ziown-html-template.js" type="text/javascript"></script>
+<script src="/assets/js/ziown-script.js"></script>
+<script src="/assets/js/ziown-utility.js" type="text/javascript"></script>
+<script src="/assets/js/ziown-variable.js" type="text/javascript"></script>
+<script src="/assets/js/ziown-json.js" type="text/javascript"></script>
+<script src="/assets/js/ziown-form.js" type="text/javascript"></script>
+<script src="/assets/js/ziown.js" type="text/javascript"></script>
+
+<!-- Internet Explorer HTML5 enabling code: -->
+<!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+        <style type="text/css">
+        .clear {
+          zoom: 1;
+          display: block;
+        }
+        </style>
+<![endif]-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#frmElements ul li").draggable({revert:true});
+        $("#alert").droppable({drop: function(event, ui) {
+            alert('jaman')
+        }});
+        $('#frmElements').stickyScroll();
+    });
+</script>

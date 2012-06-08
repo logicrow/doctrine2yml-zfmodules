@@ -1,0 +1,50 @@
+<div id="codeWrap">
+<?php echo $this->render('partials/formNavigation.phtml');?>
+    <div class="widget-top">
+        <h1>Form List</h1>
+
+        <div class="new-form"><a href="/form/create"><span>Add New Form</span></a></div>
+    </div>
+    <div class="form-list">
+        <?php if (is_array($this->forms) && count($this->forms) > 0): ?>
+        <?php foreach ($this->forms as $form): ?>
+            <div class="name-wrap" id="form-<?php echo $form->getId();?>">
+                <div class="name-toppart">
+                    <h2><?php echo $form->getName()?></h2>
+
+                    <div class="themeassign">
+                        <label>Theme</label>
+                        <select name="theme" class="theme">
+                            <?php if (is_array($this->userThemes) && count($this->userThemes) > 0): ?>
+                            <?php foreach ($this->userThemes as $userTheme): ?>
+                                <?php $selected = ($userTheme->getTheme()->getId() == $form->getTheme()->getId()) ? 'selected ="selected"'
+                                        : ''; ?>
+                                <option value="<?php echo $userTheme->getTheme()->getId()?>" <?php echo $selected;?>>
+                                    <?php echo $userTheme->getTheme()->getName();?>
+                                </option>
+                                <?php endforeach; ?>
+                            <?php endif;?>
+                        </select>
+                    </div>
+                </div>
+                <ul class="form-function form-<?php echo $form->getId()?>" style="display:none;">
+                    <li><a href="#"><span class="entries">Entries</span></a></li>
+                    <li><a href="/form/view/name/<?php echo $form->getSlug();?>"><span class="frm-view">View</span></a></li>
+                    <li><a href="/form/edit/id/<?php echo $form->getId();?>"><span class="frm-edit">Edit</span></a></li>
+                    <li><a href="#"><span class="frm-analytics">Analytics</span></a></li>
+                    <li><a href="#"><span class="frm-notification">Notification</span></a></li>
+                    <li><a href="#"><span class="frm-rules">Rules</span></a></li>
+                    <li><a href="#"><span class="frm-payment">Payments</span></a></li>
+                    <li><a href="#"><span class="frm-code">Code</span></a></li>
+                    <li><a href="#"><span class="frm-protect">Protect</span></a></li>
+                    <li><a href="#"><span class="frm-duplicate">Duplicate</span></a></li>
+                    <li><a href="#"><span class="frm-delete">Delete</span></a></li>
+                </ul>
+            </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+        <p>You didn't crate any form yet. please create one to click <a href="/form/crate">here</a></p>
+        <?php endif;?>
+
+    </div>
+</div>
